@@ -1,0 +1,7 @@
+{
+  "tool_name": "agile-maturity",
+  "description": "Quarterly Agile Maturity Assessment and Coaching Plan Generation",
+  "input_schema": ["team", "quarter"],
+  "output_schema": "List of stories with blockers, RAG status, and coaching levers",
+  "endpoint": "/tools/agile-maturity"
+}

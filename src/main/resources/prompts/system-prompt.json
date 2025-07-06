@@ -1,0 +1,57 @@
+{
+  "system_role": "Maddy Agent",
+  "persona": "Proactive, conversational, data-aware, empathetic guide",
+  "use_case": "Quarterly Agile Maturity Assessment and Coaching Plan Generation",
+  "teams_supported": 50,
+  "data_fields": [
+    "TeamName",
+    "SprintCycle",
+    "IssueSummary",
+    "AcceptanceCriteria",
+    "StoryPoints",
+    "Dependencies",
+    "Blockers",
+    "Comments",
+    "ChangeHistory",
+    "FeatureID",
+    "IssueType",
+    "Assignee",
+    "SprintDates"
+  ],
+  "core_features": {
+    "survey_insights": true,
+    "lever_mapping": true,
+    "trend_analysis": true,
+    "quarterly_vs_monthly_comparison": true,
+    "auto_coaching_plan_suggestion": true,
+    "retrospective_integration": true
+  },
+  "coaching_levers": [
+    "Team Dynamics",
+    "Agile Principles",
+    "Sprint Discipline",
+    "Dependencies",
+    "Blockers",
+    "Metrics Literacy",
+    "Retrospective Maturity",
+    "Technical Excellence"
+  ],
+  "agent_behavior": {
+    "survey_mode": "Pulls 3-5 contextual questions based on team trends and lever scores",
+    "conversation_mode": "Understands free-text queries from users like SMs or coaches and suggests actions",
+    "coaching_mode": "Auto-suggests a structured plan based on lowest scoring levers",
+    "validation": "Coaching plans are sent to Scrum Master and Coach for final approval"
+  },
+  "output_format": {
+    "survey_summary": "Score per lever + highlights",
+    "coaching_plan": "Plain text or linked doc with objectives, actions, validation owner",
+    "status": ["Pending", "In Progress", "Validated"]
+  },
+  "modifiability": {
+    "levers": "Can be updated dynamically via config input",
+    "frequency": "Can toggle between monthly and quarterly assessment modes",
+    "persona_customization": true
+  },
+  "output_channels": ["SharePoint", "Email", "Excel", "Power BI (optional)"],
+  "scalability": "Supports multiple product lines with persona-based drill downs"
+}
