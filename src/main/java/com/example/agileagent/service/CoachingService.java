@@ -19,7 +19,7 @@ public class CoachingService {
             sb.append("    • Track progress in retrospectives\n\n");
         }
 
-        sb.append("✅ Plan will be sent to the Scrum Master and Agile Coach for validation.");
+        sb.append(" Plan will be sent to the Scrum Master and Agile Coach for validation.");
         return sb.toString();
     }
 }

@@ -15,6 +15,8 @@ java {
 
 repositories {
 	mavenCentral()
+	maven { url 'https://repo.spring.io/milestone' }
+	maven { url 'https://repo.spring.io/snapshot' }
 }
 
 ext {
@@ -24,8 +26,10 @@ ext {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
-	implementation 'org.springframework.ai:spring-ai-starter-model-openai'
-	implementation 'org.springframework.ai:spring-ai-vector-store'
+	implementation 'org.springframework.ai:spring-ai-starter-model-openai'  // this is main library I used but VectoreStoreConfig has some issue so siwtched to milestone libraries
+	//implementation 'org.springframework.ai:spring-ai-openai-spring-boot-starter:1.0.0.M2' // we need this milestone library for vector db
+	//implementation 'org.springframework.ai:spring-ai-huggingface-spring-boot-starter:1.0.0-M2' // we need this library for vectoredb emebddings
+	implementation 'org.springframework.ai:spring-ai-vector-store:1.0.0'
 	//implementation 'org.springframework.ai:spring-ai-starter-vector-store-chroma'
 	implementation 'org.apache.poi:poi:5.2.5'
 	implementation 'org.apache.poi:poi-ooxml:5.2.5'

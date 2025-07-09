@@ -17,7 +17,7 @@ public class AgileAgentController {
         return agentService.handleUserQuery(query);
     }*/
 
-    @PostMapping("/ask")
+    @PostMapping("/chat")
     public String ask(@RequestBody Map<String, String> input, @RequestHeader("X-Session-ID") String sessionId) throws Exception{
         String userQuery = input.get("query");
         return agentService.handleUserQuery(userQuery, sessionId);
